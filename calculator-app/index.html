@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Calculator app</title>
+	<script src="../angular.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div ng-controller="CalcCntrlr as ctrl">
+	<input type="text" ng-model="ctrl.input1">
+	<span ng-bind="ctrl.selectedOperation"></span> 
+	<input type="text" ng-model="ctrl.input2">
+	<button ng-click="ctrl.resultBtnClicked()">=</button>
+	<span ng-bind="ctrl.result"></span> 
+	<div>
+		<button ng-click="ctrl.btnClicked('+')" >+</button>
+		<button ng-click="ctrl.btnClicked('-')" >-</button>
+		<button ng-click="ctrl.btnClicked('%')" >%</button>
+		<button ng-click="ctrl.btnClicked('*')" >*</button>
+	</div>
+	</div>
+</body>
+</html>
